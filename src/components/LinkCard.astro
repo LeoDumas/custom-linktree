@@ -6,7 +6,7 @@ interface Props {
 const {title, link} = Astro.props;
 ---
 
-<li class="list-none rounded-full bg-white w-full w-52 sm:w-64 md:w-72 lg:w-80 xl:w-96 h-12 my-5 min-width-400 text-gray-800 transition-all duration-200">
+<li class="list-none rounded-full bg-white w-52 sm:w-64 md:w-72 lg:w-80 xl:w-96 h-12 my-5 min-width-400 text-gray-800 transition-all duration-200">
   <a class="flex justify-center items-center w-full h-full" href={link}>
     <slot />
     <h2 class="ml-2">{title}</h2>
