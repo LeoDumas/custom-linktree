@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LinkCard from '../components/LinkCard.astro';
+import { Image } from 'astro:assets';
+import github from '../assets/github.png';
+import linkedin from '../assets/linkedin.png';
+import profil_picture from '../assets/profil_picture.jpg'
+---
+
+<Layout title="My links">
+	<main class=" w-screen h-screen flex flex-col items-center">
+
+		<Image class=" w-32 h-32 rounded-full border-white border-2 mt-14" alt="profilPicture" src={profil_picture}/>
+		
+		<div class=" my-8 bg-[#301934] px-10 py-2 rounded-full border border-white">
+			<p class=" text-white text-xl">Léo 👨‍💻</p>
+		</div>
+
+		<LinkCard title='GitHub' link='https://github.com/leoDumas/'> 
+			<Image class="mr-2 w-8 h-8" src={github} alt="temp"/>
+		</LinkCard>
+		
+		<LinkCard title='LinkedIn' link='https://www.linkedin.com/in/dumas-leo/'> 
+			<Image class="mr-2 w-8 h-8" src={linkedin} alt="temp"/>
+		</LinkCard>
+	
+	</main>
+</Layout>
