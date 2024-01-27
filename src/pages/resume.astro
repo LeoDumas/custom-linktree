@@ -1,11 +1,121 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ResumeBox from '../components/ResumeBox.astro';
+import ResumeTextBox from '../components/ResumeTextBox.astro';
+import { Image } from 'astro:assets';
+
+import profile_picture from '../assets/profil_picture.jpg'
 ---
 
-<Layout title='My resume'>
+<Layout title='My resume'}>
+	<div class="grid grid-cols-4 grid-rows-1 mx-16 my-2">
 
-	<main>
+		<div>
+			<ResumeBox color='black'>
+				<ResumeTextBox>
+					<Image class="rounded-3xl" src={profile_picture} alt="profile_picture_resume"} />
+					<h1 class=" text-5xl font-semibold mt-8">DUMAS Léo</h1>
+					<p class=" text-lg my-2">Développeur Web</p>
+				</ResumeTextBox>
+			</ResumeBox>
+			
+			<ResumeBox title="Soft Skills" color="white">
+				<ResumeTextBox>
+				<ul class="list-disc ml-5">
+					<li>Autonomie</li> 
+					<li>Travail en équipe</li>
+					<li>Sens du resultat</li>
+					<li>Curieux </li>
+					<li>Rigueur</li>
+				</ul>
+				</ResumeTextBox>
+			</ResumeBox>
 
-	</main>
+			<ResumeBox title="Langues" color="black">
+				<ResumeTextBox>
+					<p>Francais : C2 | Langue natale</p>
+					<p>Anglais : B2</p>
+					<p>Espagnol : A1</p>
+				</ResumeTextBox>
+			</ResumeBox>
+
+			<ResumeBox title="Contact" color='beige'>
+				<ResumeTextBox>
+					<h3 class=" text-gray-500">Téléphone : </h3>
+					<p>+33 06 ** ** ** 98</p>
+					<h3 class=" text-gray-500">Email : </h3>
+					<p>temporary.email@gmail.com</p>
+				</ResumeTextBox>
+			</ResumeBox>
+
+		</div>
+	
+		<div class="col-span-3">
+			<ResumeBox title='Experiences' color='beige'>
+
+				<ResumeTextBox title='Service civique - Médiateur numérique' aDate='Décembre 2023 - Juin 2024' company='Domofrance' >
+					<ul class="list-disc ml-5 text-[#82848B] mt-3 mb-5">
+						<li>
+							Accompagnement des locataires dans l’utilisation des nouvelles technologies 
+						</li>
+					</ul>
+				</ResumeTextBox>
+				<ResumeTextBox title='Développeur (Stagiaire)' aDate='Janvier 2023 - Mars 2023' company='Axone-Io, Mérignac' >
+					<ul class="list-disc ml-5 text-[#82848B] mt-3 mb-5">
+						<li>
+							Création de modules Java et ReactJS pour Ignition (Inductive automation)
+						</li>
+						<li>
+							Transformer un document Markdown en site web en temps réel en utilisant ReactJS.
+						</li>
+						<li>
+							Services d'hébergement de site web
+						</li>
+					</ul>
+				</ResumeTextBox>
+				<ResumeTextBox title='Développeur (Stagiaire)' aDate='Juin 2022 - Juillet 2022' company='Xerex, Begles' >
+					<ul class="list-disc ml-5 text-[#82848B] mt-3">
+						<li>
+							Mise en place d'un logiciel de gestion d'employés en C# (salaire, congés, etc.)
+						</li>
+						<li>
+							Utilisation de MySQL pour la création et la gestion d'une base de données
+						</li>
+						<li>
+							Protection contre les injections SQL et la gestion des accès utilisateurs.
+						</li>
+					</ul>
+				</ResumeTextBox>
+
+			</ResumeBox>
+		
+			<ResumeBox title='Formations' color='white'> 
+				<ResumeTextBox title='BTS SIO' aDate='2021 - 2023'>
+					<ul class="list-disc ml-5 text-[#82848B] mt-3 mb-5">
+						<li>
+							Option SLAM (Solutions Logicielles et Applications Métier)
+						</li>
+						<li>
+							Lycée Gustave Eiffel, Bordeaux 33800
+						</li>
+					</ul>
+				</ResumeTextBox>
+			</ResumeBox>
+
+			<ResumeBox title='Compétences' color='black'>
+				<h1 class="font-semibold">Langages</h1>
+				<p class="mb-2">Python & Flask, HTML, CSS, JS</p>
+
+				<h1 class="font-semibold">Méthodologie de projet</h1>
+				<p class="mb-2">SCRUM, Shape up</p>
+				
+				<h1 class="font-semibold">Cybersécurité</h1>
+				<p class="mb-2">RGPD, Sécurité web</p>
+			</ResumeBox>
+
+		</div>
+	
+
+	</div>
 
 </Layout>

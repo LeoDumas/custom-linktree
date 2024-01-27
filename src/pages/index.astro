@@ -5,8 +5,7 @@ import { Image } from 'astro:assets';
 import github from '../assets/github.png';
 import linkedin from '../assets/linkedin.png';
 import profil_picture from '../assets/profil_picture.jpg'
-import ResumeBox from '../components/ResumeBox.astro';
-import ResumeTextBox from '../components/ResumeTextBox.astro';
+import resume_picture from '../assets/resume.svg'
 ---
 
 <Layout title="My links">
@@ -19,38 +18,16 @@ import ResumeTextBox from '../components/ResumeTextBox.astro';
 		</div>
 
 		<LinkCard title='GitHub' link='https://github.com/leoDumas/'> 
-			<Image class="mr-2 w-8 h-8" src={github} alt="temp"/>
+			<Image class="mr-2 w-8 h-8" src={github} alt="github_picture"/>
 		</LinkCard>
 		
 		<LinkCard title='LinkedIn' link='https://www.linkedin.com/in/dumas-leo/'> 
-			<Image class="mr-2 w-8 h-8" src={linkedin} alt="temp"/>
+			<Image class="mr-2 w-8 h-8" src={linkedin} alt="linkedin_picture"/>
 		</LinkCard>
-	
-		<ResumeBox title='Experiences' color='beige'> 
-			 <ResumeTextBox title='Test1' aDate='19 Janv - 18 Mars' company='company1' >
-				<p>Ceci est un text</p>
-				<ul>
-					<li>valeur 1</li>
-					<li>valeur 2</li>
-				</ul>
-			 </ResumeTextBox>
-		</ResumeBox>
-	
-		<ResumeBox title='Soft Skills' color='black'> 
-			 <ResumeTextBox>
-				<ul>
-					<li>- Rigeur</li>
-					<li>- Autonomie</li>
-					<li>- Travail en équipe</li>
-				</ul>
-			 </ResumeTextBox>
-		</ResumeBox>
 		
-		<ResumeBox title='Contact' color='white'> 
-			 <ResumeTextBox>
-				<h3 class=" text-gray-500">Email : </h3>
-				<p>mail@example.fr</p>
-			 </ResumeTextBox>
-		</ResumeBox>
-	</main>
+		<LinkCard title='My resume' link='/resume/' > 
+			<Image class="mr-2 w-8 h-8" src={resume_picture} alt="resume_picture"}/>
+		</LinkCard>
+
+			</main>
 </Layout>

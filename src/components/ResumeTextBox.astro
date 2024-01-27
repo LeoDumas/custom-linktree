@@ -16,8 +16,10 @@ const {title, aDate, company} = Astro.props;
 	: ""}
 
 	{aDate ? 
-		<div>
-			<h4 class=" text-[#82848B]">{aDate}</h4> {company ? <h4>{" | "+company}</h4> : ""}
+		<div class="flex">
+			<h4 class=" text-[#82848B]">{aDate}</h4> {company ? 
+				<span class="text-[#82848B]">&nbsp; | &nbsp;</span>
+				<h4 class="font-semibold">{company}</h4> : ""}
 		</div>
 	: ""}
 

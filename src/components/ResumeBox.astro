@@ -1,12 +1,12 @@
 ---
 interface Props {
-	title: string;
+	title?: string;
 	color: string;	
 }
 
 const {title, color} = Astro.props;
 
-const boxStyle = `px-10 py-5 rounded-xl m-3
+const boxStyle = `px-10 py-5 rounded-xl mx-3 my-6
   ${color === "black" ? "bg-[#000000] text-white" : 
   color === "white" ? "bg-[#F8F8F8] text-black" : 
   color === "beige" ? "bg-[#E9E5DD] text-black" : "bg-[#F8F8F8] text-black"}`
@@ -15,9 +15,10 @@ const boxStyle = `px-10 py-5 rounded-xl m-3
 
 <div class={boxStyle}>
 	
-	<h1 class=" text-2xl {{$color === 'black' ? 'text-white' : 'text-black'}}">{title}</h1>
-
-	<div class="bg-[#AFA8A8] h-[2px] w-full my-3"></div>
+    {title ? 
+		<h1 class=" text-2xl {{$color === 'black' ? 'text-white' : 'text-black'}}">{title}</h1>
+		<div class="bg-[#AFA8A8] h-[2px] w-full my-3"></div>
+	: ""}
 
 	<slot />
 
