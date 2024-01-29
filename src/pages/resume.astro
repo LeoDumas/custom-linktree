@@ -7,49 +7,47 @@ import { Image } from 'astro:assets';
 import profile_picture from '../assets/profil_picture.jpg'
 ---
 
-<Layout title='My resume'}>
-	<div class="grid grid-cols-4 grid-rows-1 mx-16 my-2">
+<Layout title='My resume'>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-2 my-2 w-full sm:w-2/3 sm:mx-auto">
 
-		<div>
-			<ResumeBox color='black'>
-				<ResumeTextBox>
-					<Image class="rounded-3xl" src={profile_picture} alt="profile_picture_resume"} />
-					<h1 class=" text-5xl font-semibold mt-8">DUMAS Léo</h1>
-					<p class=" text-lg my-2">Développeur Web</p>
-				</ResumeTextBox>
-			</ResumeBox>
-			
-			<ResumeBox title="Soft Skills" color="white">
-				<ResumeTextBox>
-				<ul class="list-disc ml-5">
-					<li>Autonomie</li> 
-					<li>Travail en équipe</li>
-					<li>Sens du resultat</li>
-					<li>Curieux </li>
-					<li>Rigueur</li>
-				</ul>
-				</ResumeTextBox>
-			</ResumeBox>
+    <div class="mb-4 sm:mb-0">
+      <ResumeBox color='black'>
+        <ResumeTextBox>
+          <Image class="rounded-3xl" src={profile_picture} alt="profile_picture"} />
+          <h1 class="text-5xl font-semibold mt-8">DUMAS Léo</h1>
+          <p class="text-lg my-2">Développeur Web</p>
+        </ResumeTextBox>
+      </ResumeBox>
 
-			<ResumeBox title="Langues" color="black">
-				<ResumeTextBox>
-					<p>Francais : C2 | Langue natale</p>
-					<p>Anglais : B2</p>
-					<p>Espagnol : A1</p>
-				</ResumeTextBox>
-			</ResumeBox>
+      <ResumeBox title="Soft Skills" color="white">
+        <ResumeTextBox>
+          <ul class="list-disc ml-5">
+            <li>Autonomie</li>
+            <li>Travail en équipe</li>
+            <li>Sens du résultat</li>
+            <li>Curieux </li>
+            <li>Rigueur</li>
+          </ul>
+        </ResumeTextBox>
+      </ResumeBox>
 
-			<ResumeBox title="Contact" color='beige'>
-				<ResumeTextBox>
-					<h3 class=" text-gray-500">Téléphone : </h3>
-					<p>+33 06 ** ** ** 98</p>
-					<h3 class=" text-gray-500">Email : </h3>
-					<p>temporary.email@gmail.com</p>
-				</ResumeTextBox>
-			</ResumeBox>
+      <ResumeBox title="Langues" color="black">
+        <ResumeTextBox>
+          <p>Francais : C2 | Langue natale</p>
+          <p>Anglais : B2</p>
+          <p>Espagnol : A1</p>
+        </ResumeTextBox>
+      </ResumeBox>
 
-		</div>
-	
+      <ResumeBox title="Contact" color='beige'>
+        <ResumeTextBox>
+          <h3 class="text-gray-500">Téléphone : </h3>
+          <p>+33 06 ** ** ** 98</p>
+          <h3 class="text-gray-500">Email : </h3>
+          <p>temporary.email@gmail.com</p>
+        </ResumeTextBox>
+		</ResumeBox>
+		</div>	
 		<div class="col-span-3">
 			<ResumeBox title='Experiences' color='beige'>
 
@@ -90,7 +88,7 @@ import profile_picture from '../assets/profil_picture.jpg'
 			</ResumeBox>
 		
 			<ResumeBox title='Formations' color='white'> 
-				<ResumeTextBox title='BTS SIO' aDate='2021 - 2023'>
+				<ResumeTextBox title='BTS SIO (Service informatique aux organisations)' aDate='2021 - 2023'>
 					<ul class="list-disc ml-5 text-[#82848B] mt-3 mb-5">
 						<li>
 							Option SLAM (Solutions Logicielles et Applications Métier)
